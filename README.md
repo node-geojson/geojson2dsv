@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mapbox/geojson2dsv.png)](https://travis-ci.org/mapbox/geojson2dsv)
+
 # geojson2csv
 
 The reverse of csv2geojson: shuttle [GeoJSON](http://geojson.org/) points into
