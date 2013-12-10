@@ -1,0 +1,31 @@
+{
+  "name": "geojson2dsv",
+  "version": "0.0.0",
+  "description": "shuttle geojson points into csv encoding",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/geojson2dsv.git"
+  },
+  "keywords": [
+    "geojson",
+    "csv",
+    "encoding"
+  ],
+  "author": "Tom MacWright",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/mapbox/geojson2csv/issues"
+  },
+  "homepage": "https://github.com/mapbox/geojson2csv",
+  "dependencies": {
+    "dsv": "0.0.3"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.15.1"
+  }
+}
