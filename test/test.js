@@ -1,21 +1,21 @@
-var geojson2csv = require('../');
+var geojson2dsv = require('../');
 var expect = require('expect.js');
 
-describe('geojson2csv', function() {
+describe('geojson2dsv', function() {
     it('encodes a single point', function() {
-        expect(geojson2csv({
+        expect(geojson2dsv({
             type: 'Point',
             coordinates: [0,0]
         })).to.eql('lon,lat\n0,0');
     });
     it('customizes a delimiter', function() {
-        expect(geojson2csv({
+        expect(geojson2dsv({
             type: 'Point',
             coordinates: [0,0]
         }, ';')).to.eql('lon;lat\n0;0');
     });
     it('encodes a feature', function() {
-        expect(geojson2csv({
+        expect(geojson2dsv({
             type: 'Feature',
             geometry: {
                 type: 'Point',
@@ -27,7 +27,7 @@ describe('geojson2csv', function() {
         })).to.eql('a,lon,lat\nb,0,0');
     });
     it('encodes a featurecollection', function() {
-        expect(geojson2csv({
+        expect(geojson2dsv({
             type: 'FeatureCollection',
             features: [{
                 type: 'Feature',
@@ -42,7 +42,7 @@ describe('geojson2csv', function() {
         })).to.eql('a,lon,lat\nb,10,0');
     });
     it('ignores polygons', function() {
-        expect(geojson2csv({
+        expect(geojson2dsv({
             type: 'FeatureCollection',
             features: [{
                 type: 'Feature',
