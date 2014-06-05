@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/mapbox/geojson2dsv.png)](https://travis-ci.org/mapbox/geojson2dsv)
 
-# geojson2csv
+# geojson2dsv
 
 The reverse of [csv2geojson](https://github.com/mapbox/csv2geojson): shuttle [GeoJSON](http://geojson.org/) points into
 CSV encoding.
@@ -9,7 +9,7 @@ Currently points only.
 
 ## api
 
-### `csvString = geojson2csv(geojsonObject)`
+### `csvString = geojson2dsv(geojsonObject)`
 
 Given a valid GeoJSON object, return a CSV composed of all decodable points.
 
