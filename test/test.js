@@ -41,7 +41,7 @@ describe('geojson2dsv', function() {
             }]
         })).to.eql('a,lon,lat\nb,10,0');
     });
-    it('ignores polygons', function() {
+    it('encodes properties of non-points', function() {
         expect(geojson2dsv({
             type: 'FeatureCollection',
             features: [{
@@ -54,6 +54,30 @@ describe('geojson2dsv', function() {
                     a: 'b'
                 }
             }]
-        })).to.eql('');
+        })).to.eql('a\nb');
+    });
+    it('encodes properties of mixed geometry types', function() {
+        expect(geojson2dsv({
+            type: 'FeatureCollection',
+            features: [{
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [10,0]
+                },
+                properties: {
+                    a: 'x'
+                }
+            },{
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [[10,0]]
+                },
+                properties: {
+                    a: 'y'
+                }
+            }]
+        })).to.eql('a\nx\ny');
     });
 });

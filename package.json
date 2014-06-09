@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/mapbox/geojson2dsv",
   "dependencies": {
-    "dsv": "0.0.3"
+    "dsv": "0.0.3",
+    "geojson-normalize": "0.0.0"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
