@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mapbox/geojson2dsv.png)](https://travis-ci.org/mapbox/geojson2dsv)
+[![Build Status](https://travis-ci.org/mapbox/geojson2dsv.png)](https://travis-ci.org/mapbox/geojson2dsv) [![Coverage Status](https://coveralls.io/repos/mapbox/geojson2dsv/badge.png)](https://coveralls.io/r/mapbox/geojson2dsv)
 
 # geojson2csv
 

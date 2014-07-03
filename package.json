@@ -4,7 +4,8 @@
   "description": "shuttle geojson points into csv encoding",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "tape test/*.js",
+    "coverage": "istanbul cover test/*.js && coveralls < ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,8 @@
     "dsv": "0.0.3"
   },
   "devDependencies": {
-    "expect.js": "~0.2.0",
-    "mocha": "~1.15.1"
+    "tape": "~2.13.3",
+    "istanbul": "~0.2.14",
+    "coveralls": "~2.10.1"
   }
 }
