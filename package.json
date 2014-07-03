@@ -19,9 +19,9 @@
   "author": "Tom MacWright",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/mapbox/geojson2csv/issues"
+    "url": "https://github.com/mapbox/geojson2dsv/issues"
   },
-  "homepage": "https://github.com/mapbox/geojson2csv",
+  "homepage": "https://github.com/mapbox/geojson2dsv",
   "dependencies": {
     "dsv": "0.0.3"
   },

@@ -1,16 +1,16 @@
-var geojson2csv = require('../');
+var geojson2dsv = require('../');
 var test = require('tape');
 
-test('geojson2csv', function(t) {
-    t.equal(geojson2csv({
+test('geojson2dsv', function(t) {
+    t.equal(geojson2dsv({
         type: 'Point',
         coordinates: [0,0]
     }), 'lon,lat\n0,0');
-    t.equal(geojson2csv({
+    t.equal(geojson2dsv({
         type: 'Point',
         coordinates: [0,0]
     }, ';'), 'lon;lat\n0;0');
-    t.equal(geojson2csv({
+    t.equal(geojson2dsv({
         type: 'Feature',
         geometry: {
             type: 'Point',
@@ -20,7 +20,7 @@ test('geojson2csv', function(t) {
             a: 'b'
         }
     }), 'a,lon,lat\nb,0,0');
-    t.equal(geojson2csv({
+    t.equal(geojson2dsv({
         type: 'FeatureCollection',
         features: [{
             type: 'Feature',
@@ -33,7 +33,7 @@ test('geojson2csv', function(t) {
             }
         }]
     }), 'a,lon,lat\nb,10,0');
-    t.equal(geojson2csv({
+    t.equal(geojson2dsv({
         type: 'FeatureCollection',
         features: [{
             type: 'Feature',
@@ -46,9 +46,9 @@ test('geojson2csv', function(t) {
             }
         }]
     }), '', 'polygon ignore');
-    t.equal(geojson2csv({
+    t.equal(geojson2dsv({
         type: 'LineString',
         coordinates: [[10,0], [0, 0]]
-    }), '', 'linestring ignore');
+    }), null, 'linestring ignore');
     t.end();
 });
