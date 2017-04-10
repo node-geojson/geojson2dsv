@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/mapbox/geojson2dsv",
   "dependencies": {
-    "dsv": "0.0.3"
+    "dsv": "0.0.5"
   },
   "devDependencies": {
-    "tape": "~2.13.3",
-    "istanbul": "~0.2.14",
-    "coveralls": "~2.10.1"
+    "tape": "~4.6.3",
+    "istanbul": "~0.4.5",
+    "coveralls": "~2.13.0"
   }
 }
