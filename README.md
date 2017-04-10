@@ -2,6 +2,8 @@
 
 # geojson2dsv
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/geojson2dsv.svg)](https://greenkeeper.io/)
+
 The reverse of [csv2geojson](https://github.com/mapbox/csv2geojson): shuttle [GeoJSON](http://geojson.org/) points into
 CSV encoding.
 
