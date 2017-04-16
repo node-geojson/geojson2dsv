@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/mapbox/geojson2dsv.png)](https://travis-ci.org/mapbox/geojson2dsv) [![Coverage Status](https://coveralls.io/repos/mapbox/geojson2dsv/badge.png)](https://coveralls.io/r/mapbox/geojson2dsv)
+[![Build Status](https://travis-ci.org/mapbox/geojson2dsv.svg)](https://travis-ci.org/mapbox/geojson2dsv)
+[![Coverage Status](https://coveralls.io/repos/mapbox/geojson2dsv/badge.svg)](https://coveralls.io/r/mapbox/geojson2dsv)
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/geojson2dsv.svg)](https://greenkeeper.io/)
 
 # geojson2dsv
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/geojson2dsv.svg)](https://greenkeeper.io/)
 
 The reverse of [csv2geojson](https://github.com/mapbox/csv2geojson): shuttle [GeoJSON](http://geojson.org/) points into
 CSV encoding.
