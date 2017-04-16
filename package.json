@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js",
+    "release": "standard-version",
     "coverage": "istanbul cover test/*.js && coveralls < ./coverage/lcov.info"
   },
   "repository": {
@@ -26,9 +27,10 @@
     "dsv": "0.0.5"
   },
   "devDependencies": {
-    "tape": "~4.6.3",
+    "coveralls": "~2.13.0",
     "istanbul": "~0.4.5",
-    "coveralls": "~2.13.0"
+    "standard-version": "^4.0.0",
+    "tape": "~4.6.3"
   },
   "config": {
     "commitizen": {
