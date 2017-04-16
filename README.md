@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/mapbox/geojson2dsv.svg)](https://travis-ci.org/mapbox/geojson2dsv)
-[![Coverage Status](https://coveralls.io/repos/mapbox/geojson2dsv/badge.svg)](https://coveralls.io/r/mapbox/geojson2dsv)
+[![Build Status](https://travis-ci.org/tmcw/geojson2dsv.svg)](https://travis-ci.org/tmcw/geojson2dsv)
+[![Coverage Status](https://coveralls.io/repos/tmcw/geojson2dsv/badge.svg)](https://coveralls.io/r/tmcw/geojson2dsv)
 [![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/geojson2dsv.svg)](https://greenkeeper.io/)
 
 # geojson2dsv
