@@ -4,9 +4,10 @@
   "description": "shuttle geojson points into csv encoding",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js",
     "release": "standard-version",
-    "coverage": "istanbul cover test/*.js && coveralls < ./coverage/lcov.info"
+    "test": "tap test",
+    "docs": "documentation readme index.js -s API",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -24,18 +25,19 @@
   },
   "homepage": "https://github.com/mapbox/geojson2dsv",
   "dependencies": {
-    "dsv": "0.0.5"
-    "geojson-normalize": "0.0.0"
+    "@mapbox/geojson-normalize": "^0.0.1",
+    "dsv": "0.0.3"
   },
   "devDependencies": {
-    "coveralls": "~2.13.0",
-    "istanbul": "~0.4.5",
+    "cz-conventional-changelog": "^2.0.0",
+    "documentation": "^4.0.0-rc.0",
+    "prettier": "^1.2.2",
     "standard-version": "^4.0.0",
-    "tape": "~4.6.3"
+    "tap": "^10.3.2"
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }

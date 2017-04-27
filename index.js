@@ -1,19 +1,31 @@
 var dsv = require('dsv');
-var normalize = require('geojson-normalize');
+var normalize = require('@mapbox/geojson-normalize');
 
-module.exports = function(_, delim) {
-    _ = normalize(_);
+/**
+ * Given a valid GeoJSON object, return a CSV composed of all decodable points.
+ * @param {Object} geojson any GeoJSON object
+ * @param {string} delim CSV or DSV delimiter: by default, ","
+ * @param {boolean} [mixedGeometry=false] serialize just the properties
+ * of non-Point features.
+ * @example
+ * var csvString = geojson2dsv(geojsonObject)
+ */
+function geojson2dsv(geojson, delim, mixedGeometry) {
+  var rows = normalize(geojson).features
+    .map(function(feature) {
+      if (feature.geometry && feature.geometry.type === 'Point') {
+        return Object.assign({}, feature.properties, {
+          lon: feature.geometry.coordinates[0],
+          lat: feature.geometry.coordinates[1]
+        });
+      }
+      if (mixedGeometry) {
+        return feature.properties;
+      }
+    })
+    .filter(Boolean);
 
-    var onlyPoints = _.features.every(function(f) {
-        return f.geometry.type === 'Point';
-    });
+  return dsv(delim || ',').format(rows);
+}
 
-    return dsv(delim || ',').format(_.features.map(function(f) {
-        var p = JSON.parse(JSON.stringify(f.properties));
-        if (onlyPoints) {
-            p.lon = f.geometry.coordinates[0];
-            p.lat = f.geometry.coordinates[1];
-        }
-        return p;
-    }));
-};
+module.exports = geojson2dsv;
