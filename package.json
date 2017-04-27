@@ -1,6 +1,6 @@
 {
   "name": "geojson2dsv",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "shuttle geojson points into csv encoding",
   "main": "index.js",
   "scripts": {
