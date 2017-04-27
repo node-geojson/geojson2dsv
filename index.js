@@ -1,4 +1,4 @@
-var dsv = require('dsv');
+var dsvFormat = require('d3-dsv').dsvFormat;
 var normalize = require('@mapbox/geojson-normalize');
 
 /**
@@ -25,7 +25,7 @@ function geojson2dsv(geojson, delim, mixedGeometry) {
     })
     .filter(Boolean);
 
-  return dsv(delim || ',').format(rows);
+  return dsvFormat(delim || ',').format(rows);
 }
 
 module.exports = geojson2dsv;

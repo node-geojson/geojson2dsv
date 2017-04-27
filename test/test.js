@@ -78,7 +78,7 @@ test('geojson2dsv', function(t) {
             }
           }
         ]
-      }),
+      }, ',', true),
       'a\nb'
     );
     t.end();
@@ -109,7 +109,7 @@ test('geojson2dsv', function(t) {
             }
           }
         ]
-      }),
+      }, ',', true),
       'a,lon,lat\nx,10,0\ny,,'
     );
     t.end();

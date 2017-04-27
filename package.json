@@ -6,8 +6,7 @@
   "scripts": {
     "release": "standard-version",
     "test": "tap test",
-    "docs": "documentation readme index.js -s API",
-    "release": "standard-version"
+    "docs": "documentation readme index.js -s API"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,7 @@
   "homepage": "https://github.com/mapbox/geojson2dsv",
   "dependencies": {
     "@mapbox/geojson-normalize": "^0.0.1",
-    "dsv": "0.0.3"
+    "d3-dsv": "^1.0.5"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
